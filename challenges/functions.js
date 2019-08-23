@@ -43,7 +43,7 @@ console.log(consume("Mary","Poppins", greeting));
 // Explanation: 
 
 /* 
-when we invoke `nestedFunction()`, it is has to log the string of the variable `internal` into the console. Following the rules of closures, since the variable `internal` is not defined in the scope of `nestedFunction` it has to go look for the reference to `internal` in the chain of outer scopes.
+When we invoke `nestedFunction()`, it is has to log the string of the variable `internal` into the console. Following the rules of closures, since the variable `internal` is not defined in the scope of `nestedFunction` it has to go look for the reference to `internal` in the chain of outer scopes.
 the immediate outer scope is `myFunction` which contains the reference to the variable `internal`.
 */
 

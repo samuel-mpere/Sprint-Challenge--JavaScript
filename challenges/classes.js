@@ -21,6 +21,7 @@ class CuboidMaker {
 let cuboid = new CuboidMaker(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
+
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
 
