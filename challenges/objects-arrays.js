@@ -83,11 +83,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-let universities = [];
+const universities = [];
 
-let uniList = graduates.map(graduate =>  graduate.university );
+universities.push(graduates.map(graduate =>  graduate.university ).sort());
 
-universities = (uniList.sort());
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -105,13 +104,10 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-let uni = [];
+const uni = [];
 
-uni = graduates.filter((element) => element.university.includes('Uni'));
+uni.push(graduates.filter((element) => element.university.includes('Uni')));
 
-let numberOfUni = uni.length;
-
-console.log(numberOfUni);
 console.log(uni);
 
 
@@ -149,9 +145,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-let lowerCase = [];
+const lowerCase = [];
 
-lowerCase = zooAnimals.map((lowNames) => lowNames.animal_name.toLowerCase());
+lowerCase.push(zooAnimals.map((lowNames) => lowNames.animal_name.toLowerCase()));
 
 console.log(lowerCase); 
 
@@ -161,9 +157,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
-let lowerPopulation = [];
+const lowerPopulation = [];
 
-lowerPopulation = zooAnimals.filter((pop) => pop.population < 5);
+lowerPopulation.push(zooAnimals.filter((pop) => pop.population < 5));
 
 console.log(lowerPopulation);
 
