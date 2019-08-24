@@ -30,13 +30,45 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+When the `forEach()` method loops over a given array, it does not actually return anything but rather calls a provided function on each element in that array. This callback is allowed to mutate the calling array.
+Meanwhile, the `map()` method will also call a provided function on every element in the array. The difference is that `map()` utilizes return values and actually returns a new array of the same size.
+
 2. What is the difference between a function and a method?
+
+In javascript functions are blocks of code used to execute instructions on the web. It can either be declared (stated) or expressed ( by being stored in a variable such as `var`, `let` or `const`).
+Now, differentiating between a function and a method, we need to approach it from the object oriented programming paradigm of javascript; Every function in javascript is an object. 
+So when a function is declared or expressed in the window object or `Object`, without being in the scope of any outer function, we have a `function` . However, within the scope of an object, a function is referred to as a method of that object. It is invoked from the object namespace `newObj.theMethod()`. As everything, including a  function is an object in javascript, a function within a function is considered a method of that function.
 
 3. What is closure?
 
+Closure in simple terms, means a declared function will always refer to its outer scope chain to search for a referenced variable, whenever said variable is not defined in its own scope. Likewise, a function cannot access the variables and contents of a function inside its own scope.
+
 4. Describe the four rules of the 'this' keyword.
 
+RULE #1
+Window Binding
+Whenever a function is contained in the global scope, the value of `this` inside of that function will be the window object.
+If none of the other rules are met, then JavaScript will default the this keyword to reference the window object.
+
+RULE #2
+Implicit Binding
+Whenever a function is called by a preceding dot, the `this` keyword is referencing to the object on the left of the dot.
+
+RULE #3
+New Binding
+Whenever you invoke a function with the `new` keyword, JavaScript will create a brand new object and call it `this`. If a function was called with `new`, the `this` keyword is referencing that new object that was created.
+
+RULE #4
+Explicit Binding
+Whenever we invoke a function specifying where exactly and in what context we hope to invoke it we use the methods, `call`, `apply` and `bind`. These methods explicitly point us to which object `this` should refer to. 
+ `call` is the standard method normally used.
+ `apply` is used when it's preferable to output an array.
+ `bind` is used to return an entirely different version of the referenced object.
+
 5. Why do we need super() in an extended class?
+
+We call `super()` inside of a subclass constructor method in order to call the parent constructor. `super()` allows us to access the  parent Class’ prototype.
+So, `super()` works as a much elegant syntax, that explicitly call the properties of the parent class unto the sub class.
 
 ## Project Set up
 
